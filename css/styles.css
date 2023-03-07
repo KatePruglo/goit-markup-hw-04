@@ -6,6 +6,8 @@
   --header-color: #2e2f42;
   --pressed-state-color: #404bbf;
   --accent-bg-color: #f4f4fd;
+  --subtle-icon-color: #8e8f99;
+  --succes-icon-color: #31d0aa;
   --secondary-font: "Raleway", sans-serif;
   --card-set-gap: 24px;
   --card-set-gap-vertical: 48px;
@@ -145,6 +147,20 @@ img {
   padding-top: 188px;
   padding-bottom: 188px;
 }
+.overlay {
+  height: 600px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .hero-title {
   width: 494px;
   margin-bottom: 48px;
@@ -180,6 +196,15 @@ img {
 .decr-list:last-child {
   margin-right: 0;
 }
+.decr-item-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 264px;
+  height: 112px;
+  background-color: var(--accent-bg-color);
+  margin-bottom: 8px;
+}
 
 /* ---------About--------- */
 .about {
@@ -196,12 +221,15 @@ img {
   display: flex;
   gap: var(--card-set-gap);
 }
+.team-list::after {
+  box-sizing: border-box;
+}
 .team-title {
   padding-top: 32px;
   margin-bottom: 8px;
 }
 .team-subtitle {
-  padding-bottom: 32px;
+  margin-bottom: 8px;
 }
 .team {
   padding-top: 120px;
@@ -212,6 +240,69 @@ img {
   width: calc((100% - var(--card-set-gap)) / 4);
   text-align: center;
   background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--card-set-gap);
+  margin-bottom: 32px;
+}
+.team-social-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-brand);
+}
+.team-social-item:hover,
+.team-social-item:focus {
+  background-color: var(--pressed-state-color);
+}
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.team-social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------Customers--------- */
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+.customers-list {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: var(--card-set-gap);
+}
+.customers-item {
+  width: 168px;
+  height: 88px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  fill: var(--subtle-icon-color);
+  border: 1px solid var(--subtle-icon-color);
+  border-radius: 4px;
+}
+.customers-link:hover,
+.customers-link:focus {
+  fill: var(--pressed-state-color);
+  border: 1px solid var(--pressed-state-color);
 }
 
 /* ---------Footer--------- */
@@ -235,9 +326,46 @@ img {
   color: var(--accent-text-color);
 }
 .footer-subtitle {
-
   width: 264px;
   color: var(--accent-text-color);
+}
+.footer-title {
+  color: var(--accent-text-color);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-social-box {
+  margin-left: 120px;
+}
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-item:hover,
+.footer-social-item:focus {
+  background-color: var(--succes-icon-color);
+}
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.footer-social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container {
+  display: flex;
 }
 
 /* --------------Portfolio page-------------- */
@@ -262,6 +390,11 @@ img {
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap-vertical);
 }
+.service-item:hover,
+.service-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .service-card-content {
   padding: 32px 16px;
   border: 1px solid var(--accent-text-color);
@@ -281,4 +414,6 @@ img {
   background-color: var(--pressed-state-color);
   color: var(--accent-text-color);
   border-color: var(--pressed-state-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 1px rgba(0, 0, 0, 0.12);
 }
