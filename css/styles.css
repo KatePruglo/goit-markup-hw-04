@@ -308,7 +308,7 @@ img {
 .customers-link:hover,
 .customers-link:focus {
   fill: var(--pressed-state-color);
-  border: solid var(--pressed-state-color);
+  border-color: var(--pressed-state-color);
 }
 
 /* ---------Footer--------- */
